@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Zodiac Calculator</title>
+    <link href="s40-theme/css/s40-theme.css" rel="stylesheet" type="text/css" />
+    <script language="javascript" type="text/javascript" src="s40-theme/js/screensize.js"></script>
+    <script type="text/javascript">		
+		function refreshPageContent() {
+				// Add code for refreshing te page here...				
+		}		
+	</script>	
+    <script LANGUAGE="JavaScript" >
+function checnum(as)
+{
+	var dd = as.value;
+	
+	if(isNaN(dd))
+	{
+		dd = dd.substring(0,(dd.length-1));
+		as.value = dd;
+	}		
+}
+function sign()
+{
+	var d = document.first.d.value;
+	var mon = document.first.mon.value;
+	var y = document.first.y.value;
+	var curd = new Date(y,mon-1,d);
+	var res2 = curd.getMonth();
+	 var i = 0;
+	
+ 	
+	var images = new Array;
+	images[0] = new Image(160, 216);
+	images[0].src = "image/aquarius.gif";
+	images[1] = new Image(200, 136);
+	images[1].src = "image/pisces.gif";
+	images[2] = new Image(200, 187);
+	images[2].src = "image/aries.gif";
+	images[3] = new Image(200, 184);
+	images[3].src = "image/taurus.gif";
+	images[4] = new Image(200, 127);
+	images[4].src = "image/gemini.gif";
+	images[5] = new Image(200, 150);
+	images[5].src = "image/cancer.gif";
+	images[6] = new Image(200, 192);
+	images[6].src = "image/leo.gif";
+	images[7] = new Image(150, 203);
+	images[7].src = "image/virgo.gif";
+	images[8] = new Image(200, 213);
+	images[8].src = "image/libra.gif";
+	images[9] = new Image(180, 212);
+	images[9].src = "image/scorpio.gif";
+	images[10] = new Image(160, 192);
+	images[10].src = "image/sagittarius.gif";
+	images[11] = new Image(200, 180);
+	images[11].src = "image/capricorn.gif";
+	
+		
+	if(res2 == (mon-1) && y!="")
+	{
+		if (mon == 1 && d >=20 || mon == 2 && d <=18) 
+		{
+			value = "Aquarius";
+			document.first.pic1.width=160;
+			document.first.pic1.height=216;			
+			document.first.pic1.src="image/aquarius.gif";
+
+		}
+		
+		else if (mon == 2 && d >=19 || mon == 3 && d <=20) {
+			value = "Pisces";
+			document.first.pic1.width=200;
+			document.first.pic1.height=136;			
+			document.first.pic1.src="image/pisces.gif";
+
+		}
+		
+		else if (mon == 3 && d >=21 || mon == 4 && d <=19) {
+			value = "Aries";
+			document.first.pic1.width=200;
+			document.first.pic1.height=187;			
+			document.first.pic1.src="image/aries.gif";
+
+		}
+		
+		else if (mon == 4 && d >=20 || mon == 5 && d <=20) {
+			value = "Taurus";
+			document.first.pic1.width=200;
+			document.first.pic1.height=184;			
+			document.first.pic1.src="image/taurus.gif";
+
+		}
+		
+		else if (mon == 5 && d >=21 || mon == 6 && d <=21) {
+			value = "Gemini";
+			document.first.pic1.width=200;
+			document.first.pic1.height=127;			
+			document.first.pic1.src="image/gemini.gif";
+
+		}
+		
+		else if (mon == 6 && d >=22 || mon == 7 && d <=22) {
+			value = "Cancer";
+			document.first.pic1.width=200;
+			document.first.pic1.height=150;			
+			document.first.pic1.src="image/cancer.gif";
+
+		}
+		
+		else if (mon == 7 && d >=23 || mon == 8 && d <=22) {
+			value = "Leo";
+			document.first.pic1.width=200;
+			document.first.pic1.height=192;			
+			document.first.pic1.src="image/leo.gif";
+
+		}
+		
+		else if (mon == 8 && d >=23 || mon == 9 && d <=22) {
+			value = "Virgo";
+			document.first.pic1.width=150;
+			document.first.pic1.height=203;			
+			document.first.pic1.src="image/virgo.gif";
+
+		}
+		
+		else if (mon == 9 && d >=23 || mon == 10 && d <=22) {
+			value = "Libra";
+			document.first.pic1.width=200;
+			document.first.pic1.height=213;			
+			document.first.pic1.src="image/libra.gif";
+
+		}
+		
+		else if (mon == 10 && d >=23 || mon == 11 && d <=21) {
+			value = "Scorpio";
+			document.first.pic1.width=180;
+			document.first.pic1.height=212;			
+			document.first.pic1.src="image/scorpio.gif";
+
+		}
+		
+		else if (mon == 11 && d >=22 || mon == 12 && d <=21) {
+			value = "Sagittarius";
+			document.first.pic1.width=160;
+			document.first.pic1.height=192;			
+			document.first.pic1.src="image/sagittarius.gif";
+		}
+		
+		else if (mon == 12 && d >=22 || mon == 1 && d <=19) {
+			value = "Capricorn";
+			document.first.pic1.width=200;
+			document.first.pic1.height=180;			
+			document.first.pic1.src="image/capricorn.gif";
+		}
+		
+		document.first.r1.value = value;
+		document.first.n1.value = value;
+		
+		
+		x = (1901 - y) % 12
+		if (x == 1 || x == -11) {value1 = "Rat";}
+		if (x == 0) {value1 = "Ox";}
+		if (x == 11 || x == -1) {value1 = "Tiger";}
+		if (x == 10 || x == -2) {value1 = "Rabbit/Cat";}
+		if (x == 9 || x == -3)  {value1 = "Dragon";}
+		if (x == 8 || x == -4)  {value1 ="Snake";}
+		if (x == 7 || x == -5)  {value1 = "Horse";}
+		if (x == 6 || x == -6)  {value1 = "Sheep";}
+		if (x == 5 || x == -7)  {value1 = "Monkey";}
+		if (x == 4 || x == -8)  {value1 = "Cock/Phoenix";}
+		if (x == 3 || x == -9)  {value1 = "Dog";}
+		if (x == 2 || x == -10)  {value1 = "Boar";}  
+		document.first.r2.value = value1;
+	}
+	else{
+		alert("Invalid Date");
+	}
+	
+}
+	
+		
+
+
+function color(test)
+{
+
+	for(var j=2; j<10; j++)
+	{
+		var myI=document.getElementsByTagName("input").item(j);
+		//myI.setAttribute("style",ch);
+		myI.style.backgroundColor=test;
+	}
+}
+
+
+function color1(test)
+{
+var myI=document.getElementsByTagName("table").item(0);
+//myI.setAttribute("style",ch);
+myI.style.backgroundColor=test;
+}
+</script>
+
+<script type='text/javascript' src="js/jquery.js"> </script>
+	<link REL="StyleSheet" TYPE="text/css" HREF="style1.css">
+	<script language=javascript src="js/common.js"></script>
+	<script type="text/javascript" src="js/most.js"> </script> 
+	<link REL="StyleSheet" TYPE="text/css" HREF="style2.css">
+    
+    
+    
+</head>
+
+<body  style="width: background: url(image/main.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; height: 400px; width: 240px; ">
+   
+ <h3 style="font:normal 17pt Arial; "align="center">
+				   <font color=#ff0000>Zodiac Sign Finder</font></h3>
+  <table width="100%" border="0" cellpadding="0" cellspacing="4" style="width: 242px; ">
+	 </form><tr><td colspan=2><table class=result width=100% height=100%>
+<tr><td>
+<table width="240" border="0" cellpadding="0" cellspacing="4" style="width: 57px; height: 363px; ">
+	</form><tr><td colspan=2><table class=result width=100% height=100%>
+<tr><td>
+<table align="center"><tr><td>
+			<table cellspacing="0" cellpadding="3">
+			<tr><td><font color="#ff0000">Date: </font></td><td>
+			<select name="d" style="width: 39px; "><option name="1" value="1">1</option><option name="2" value="2">2</option><option name="3" value="3">3</option><option name="4" value="4">4</option><option name="5" value="5">5</option><option name="6" value="6">6</option><option name="7" value="7">7</option><option name="8" value="8">8</option><option name="9" value="9">9</option><option name="10" value="10">10</option><option name="11" value="11">11</option><option name="12" value="12">12</option><option name="13" value="13">13</option><option name="14" value="14">14</option><option name="15" value="15">15</option><option name="16" value="16">16</option><option name="17" value="17">17</option><option name="18" value="18">18</option><option name="19" value="19">19</option><option name="20" value="20">20</option><option name="21" value="21">21</option><option name="22" value="22">22</option><option name="23" value="23">23</option><option name="24" value="24">24</option><option name="25" value="25">25</option><option name="26" value="26">26</option><option name="27" value="27">27</option><option name="28" value="28">28</option><option name="29" value="29">29</option><option name="30" value="30">30</option><option name="31" value="31">31</option></select>
+			</td>
+			<td><font color="#ff0000">Month:&nbsp; </font></td><td><select name="mon" style="width: 39px; "> <option name="1" value="1">1</option><option name="2" value="2">2</option><option name="3" value="3">3</option><option name="4" value="4">4</option><option name="5" value="5">5</option><option name="6" value="6">6</option><option name="7" value="7">7</option><option name="8" value="8">8</option><option name="9" value="9">9</option><option name="10" value="10">10</option><option name="11" value="11">11</option><option name="12" value="12">12</option></select></td>
+			<td><font color="#ff0000">Year: </font></td><td><input name="y" type="text" size="8" onkeyup="checnum(this)" style="color: white; width: 35px; " /></td></tr>
+			</table>
+			<div align="center" style="padding: 12px;">
+			<a onclick="sign()"><img src="image/submit.png" style="height: 75px; width: 74px; " /></a>
+			<table align="center" class="innerc" cellspacing="0" cellpadding="3">
+			<tr align="center"><td class="inner" colspan="2"><b><font color="#ff0000">Results:</font></b></td></tr>
+			<tr><td><font color="#ff0000">Sun Sign:</font></td><td> <input name="r1" type="text" readonly="readonly" style="color:#ffffff"> </input></td></tr>
+			<tr><td><font color="#ff0000">Chinese Sign:</font></td><td> <input name="r2" type="text" readonly="readonly" style="color:#ffffff" /></td></tr>
+			</table><br>
+		</br></div></td>
+</tr>
+		</table><form name=first>
+<table  width=90% border=0 cellpadding=0 cellspacing=0 class=cbor>
+	
+	<tr><td align=center class=content>
+		
+		
+</td></tr>
+</table>
+
+<table align=center valign=top>
+		
+		<tr ><td>
+		<img name=pic1 width=0 height=0 src="image/loading.gif"></td></tr>
+</table></table>
+	</form>
+<br>	</table>
+     </div><br>
+   </div></td>
+   <td>&nbsp;</td>
+   </tr>
+   <tr>
+    <td colspan="2" align="right">&nbsp;</td>
+    <td>&nbsp;</td>
+   </tr>
+</table>
+</div>
+</body>
+</html>
